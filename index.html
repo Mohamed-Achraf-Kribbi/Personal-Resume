@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV Personnel de Mohamed Achraf - Étudiant en Programmation Web">
+    <title>Mohamed Achraf | CV Interactif</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- React & ReactDOM (UMD via CDN) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel for in-browser JSX compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- Navbar / Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="profile-info">
+                <div class="profile-img-container">
+                    <img src="achraf kribbi.jpg" alt="Mohamed Achraf Kribbi" class="profile-img">
+                </div>
+                <div class="profile-text">
+                    <h1>Mohamed Achraf Kribbi</h1>
+                    <h2 class="job-title">Web Developer & Graphic Designer</h2>
+                    <p class="tagline">+212 621 955 300</p>
+                </div>
+            </div>
+            <!-- React Component Root: Social Links -->
+            <div id="social-links-root"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- À propos -->
+        <section id="about" class="section">
+            <div class="container glass-card">
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    Motivated and creative student with experience in graphic design and photography. Skilled in creating visual content through personal and freelance projects. Passionate about learning and improving both creative and technical skills, and eager to gain professional experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- Compétences (Skills) - jQuery Animation -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Compétences</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Front End Web Development</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Graphic Design & Photo Editing</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Photography</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>English & French</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formation - jQuery Accordion -->
+        <section id="formation" class="section bg-darker">
+            <div class="container">
+                <h2 class="section-title">Formation</h2>
+                <div class="accordion" id="formation-accordion">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3><i class="fa-solid fa-graduation-cap"></i> SECOND YEAR IN COMPUTER SCIENCE</h3>
+                            <span class="icon">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="date">2025 - Present</p>
+                            <p>Cadi Ayyad University - Faculty of Science Semlalia (FSSM)</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3><i class="fa-solid fa-university"></i> FIRST YEAR IN MIP (MATH, INFO, PHYSICS)</h3>
+                            <span class="icon">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="date">2024 - 2025</p>
+                            <p>Cadi Ayyad University - Faculty of Science Semlalia (FSSM)</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3><i class="fa-solid fa-school"></i> HIGH SCHOOL DIPLOMA IN MATHEMATICAL SCIENCE</h3>
+                            <span class="icon">+</span>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="date">2023 - 2024</p>
+                            <p>Oulad Hriz high school - Berrechid. (Baccalauréat)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expériences & Projets - React Root -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Expériences & Projets</h2>
+                <!-- React Component Root: Project List -->
+                <div id="projects-root"></div>
+            </div>
+        </section>
+
+        <!-- Contact Form - jQuery Validation -->
+        <section id="contact" class="section bg-darker">
+            <div class="container glass-card">
+                <h2 class="section-title">Me Contacter</h2>
+                <div class="form-messages" id="form-messages"></div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom">
+                        <span class="error-msg" id="name-error">Ce champ est requis.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre.email@exemple.com">
+                        <span class="error-msg" id="email-error">Veuillez entrer une adresse email valide.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message..."></textarea>
+                        <span class="error-msg" id="message-error">Ce champ est requis.</span>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <span>Envoyer</span> <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mohamed Achraf. Créé avec HTML, CSS, jQuery & ReactJS.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // 1. Social Links Component
+        const SocialLinks = ({ github, linkedin, email }) => {
+            return (
+                <div className="social-links">
+                    <a href={github} target="_blank" rel="noopener noreferrer" className="social-link" title="GitHub">
+                        <i className="fa-brands fa-github"></i>
+                    </a>
+                    <a href={linkedin} target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn">
+                        <i className="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href={`mailto:${email}`} className="social-link" title="Email">
+                        <i className="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            );
+        };
+
+        // 2. Project Card Component
+        const ProjectCard = ({ title, description, technologies, link }) => {
+            return (
+                <div className="project-card">
+                    <div className="project-header">
+                        <h3 className="project-title">{title}</h3>
+                        {link && (
+                            <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">
+                                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        )}
+                    </div>
+                    <p className="project-desc">{description}</p>
+                    <div className="project-tech">
+                        {technologies.map((tech, index) => (
+                            <span key={index} className="tech-tag">{tech}</span>
+                        ))}
+                    </div>
+                </div>
+            );
+        };
+
+        // 3. Project List Component
+        const ProjectList = ({ projects }) => {
+            return (
+                <div className="projects-grid">
+                    {projects.map((project, index) => (
+                        <ProjectCard 
+                            key={index}
+                            title={project.title}
+                            description={project.description}
+                            technologies={project.technologies}
+                            link={project.link}
+                        />
+                    ))}
+                </div>
+            );
+        };
+
+        // Data & Mounting
+        const myExperiences = [
+            {
+                title: "Forest Runner",
+                description: "A C++ game with custom gameplay mechanics and logic.",
+                technologies: ["C++", "Game Development"],
+                link: "https://github.com/Mohamed-Achraf-Kribbi/Forest-Runner.git"
+            },
+            {
+                title: "MI-Lab",
+                description: "A web project that provides resources for first and second-year MI students.",
+                technologies: ["Web Development", "HTML", "CSS", "JavaScript"],
+                link: "https://github.com/Mohamed-Achraf-Kribbi/MI-Lab.git"
+            },
+            {
+                title: "Web Developer",
+                description: "Designed and developed responsive web pages. Applied HTML, CSS, and JavaScript to create interactive interfaces.",
+                technologies: ["HTML", "CSS", "JavaScript", "React"],
+                link: "" // Can add github link later
+            },
+            {
+                title: "Graphic Designer (Freelance)",
+                description: "Created logos, posters, and visual content for various clients. Used design tools to deliver high-quality assets.",
+                technologies: ["Photoshop", "Illustrator", "Canva"],
+                link: ""
+            },
+            {
+                title: "Photographer",
+                description: "Conducted photoshoots including portraits, events, and products. Edited and retouched photos for final delivery.",
+                technologies: ["Photography", "Photo Editing", "Lightroom"],
+                link: ""
+            },
+            {
+                title: "Vice President - Fluventa Club",
+                description: "Participated in organizing events and activities. Developed communication and leadership skills.",
+                technologies: ["Event Management", "Communication", "Leadership"],
+                link: ""
+            }
+        ];
+
+        // Mount Social Links
+        const socialRoot = ReactDOM.createRoot(document.getElementById('social-links-root'));
+        socialRoot.render(
+            <SocialLinks 
+                github="https://github.com/Mohamed-Achraf-Kribbi" 
+                linkedin="https://www.linkedin.com/in/mohamed-achraf-kribbi-9a1243366/" 
+                email="mohamedachrafkribbi@gmail.com" 
+            />
+        );
+
+        // Mount Projects (Experiences)
+        const projectsRoot = ReactDOM.createRoot(document.getElementById('projects-root'));
+        projectsRoot.render(<ProjectList projects={myExperiences} />);
+    </script>
+</body>
+</html>
