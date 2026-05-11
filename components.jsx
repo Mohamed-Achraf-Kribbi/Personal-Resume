@@ -1,7 +1,7 @@
 const { useState, useEffect } = React;
 
 // 1. Social Links Component
-const SocialLinks = ({ github, linkedin, email }) => {
+const SocialLinks = ({ github, linkedin, email, instagram }) => {
     return (
         <div className="social-links">
             <a href={github} target="_blank" rel="noopener noreferrer" className="social-link" title="GitHub">
@@ -12,6 +12,9 @@ const SocialLinks = ({ github, linkedin, email }) => {
             </a>
             <a href={`mailto:${email}`} className="social-link" title="Email">
                 <i className="fa-solid fa-envelope"></i>
+            </a>
+            <a href={instagram} target="_blank" rel="noopener noreferrer" className="social-link" title="Instagram">
+                <i className="fa-brands fa-instagram"></i>
             </a>
         </div>
     );
@@ -74,7 +77,7 @@ const myExperiences = [
         title: "Web Developer",
         description: "Designed and developed responsive web pages. Applied HTML, CSS, and JavaScript to create interactive interfaces.",
         technologies: ["HTML", "CSS", "JavaScript", "React"],
-        link: "" // Can add github link later
+        link: ""
     },
     {
         title: "Graphic Designer (Freelance)",
@@ -100,9 +103,10 @@ const myExperiences = [
 const socialRoot = ReactDOM.createRoot(document.getElementById('social-links-root'));
 socialRoot.render(
     <SocialLinks 
-        github="https://github.com/Mohamed-Achraf-Kribbi" 
-        linkedin="https://www.linkedin.com/in/mohamed-achraf-kribbi-9a1243366/" 
-        email="mohamedachrafkribbi@gmail.com" 
+        github="https://github.com/mohamedachraf" 
+        linkedin="https://linkedin.com/in/mohamedachrafkribbi" 
+        email="mohamedachrafkribbi@gmail.com"
+        instagram="https://www.instagram.com/its_achraf_mfs/" 
     />
 );
 
